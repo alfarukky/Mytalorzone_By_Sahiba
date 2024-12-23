@@ -29,7 +29,7 @@ This application provides a user-friendly online shopping experience, complete w
 
 ## Links
 
-- **Solution URL**: [Add link here](#)
+- **Solution URL**: [https://mytalorzone-by-sahiba-1-929y.onrender.com/](#)
 
 ---
 
