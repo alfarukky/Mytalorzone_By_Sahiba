@@ -1,5 +1,7 @@
-export const BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+//export const BASE_URL =
+//process.env.NODE_ENV === 'develeopment' ? 'http://localhost:5000' : '';
+export const BASE_URL = 'https://mytalorzone-by-sahiba-py7y.onrender.com'; // If using proxy
+export const GET_PRODUCTS_URL = 'https://mytalorzone-by-sahiba-py7y.onrender.com/get-product';
+export const GET_PRODUCT_URL = 'https://mytalorzone-by-sahiba-py7y.onrender.com/product';
+export const USERS_URL = 'https://mytalorzone-by-sahiba-py7y.onrender.com/auth';
 
-export const GET_PRODUCTS_URL = `${BASE_URL}/get-product`;
-export const GET_PRODUCT_URL = `${BASE_URL}/product`;
-export const USERS_URL = `${BASE_URL}/auth`;

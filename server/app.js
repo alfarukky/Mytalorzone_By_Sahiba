@@ -26,7 +26,7 @@ app.use(
       'https://merabestie-khaki.vercel.app',
       'https://merabestie.com',
       'https://hosteecommerce.vercel.app',
-      'https://mytalorzone-by-sahiba-self.vercel.app/'
+      'https://mytalorzone-by-sahiba-1-929y.onrender.com/'
     ], // Frontend URLs
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
