@@ -1,0 +1,37 @@
+.shadow_text {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.product-card {
+  width: 15rem;
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+.product-card-img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0; /* Rounded top corners for image */
+}
+
+.product-card-title {
+  font-size: 16px; /* Set a specific font size */
+}
+
+.product-card-body {
+  padding: 1.2rem; /* Add extra padding around the card content */
+}
+
+.product-card-text {
+  font-size: 14px; /* Smaller font size for price text */
+}
+
+.product-card .btn-outline-primary {
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase button text */
+}
