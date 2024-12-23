@@ -6,11 +6,11 @@ This application provides a user-friendly online shopping experience, complete w
 ## Features
 
 - **Dynamic Product Catalog**: Browse through a variety of products fetched dynamically from the backend.
-**- Shopping Cart:**Add products to the cart, update quantities, and view the total price dynamically.
-** Price Formatting:**  Supports currency formatting for a localized shopping experience.
-** Checkout Process: ** Seamless navigation from cart to checkout.
-** Responsive Design:**  Ensures a mobile-friendly and visually appealing interface.
-** Toast Notifications:**  Feedback for user actions such as adding items to the cart or completing a purchase.
+**- Shopping Cart**: Add products to the cart, update quantities, and view the total price dynamically.
+**-Price Formatting**:  Supports currency formatting for a localized shopping experience.
+**-Checkout Process** Seamless navigation from cart to checkout.
+**-Responsive Design**: Ensures a mobile-friendly and visually appealing interface.
+**-Toast Notifications:** Feedback for user actions such as adding items to the cart or completing a purchase.
 
 ### Screenshot
 
