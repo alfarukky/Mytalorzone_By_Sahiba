@@ -1,36 +1,33 @@
-import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import '../bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { Badge, Navbar, Nav, Container } from 'react-bootstrap';
+import '../assets/bootstrap.min.css';
+import '../assets/index.css';
 
 const Header = () => {
-  const navigate = useNavigate();
+  const { cartItems } = useSelector((state) => state.cart);
+  console.log(cartItems);
   return (
     <header>
       {/* Top announcement bar */}
       <div className="bg-dark text-white text-center py-1">
-        Welcome to our website! We've already processed
-        <strong className="badge bg-light text-dark mx-1">20+</strong>
-        orders and counting.
+        Experience excellence! Trusted by customers worldwide for quality and
+        reliability.
       </div>
 
       {/* Navbar */}
       <Navbar
         bg="primary"
         expand="lg"
-        className="navbar-light border-bottom shadow-sm"
+        className="sticky-top navbar-light border-bottom shadow-sm mb-4"
       >
         <Container fluid>
           <Navbar.Brand
             as={Link}
             to="/"
-            className="d-flex align-items-center me-auto text-white"
+            className="shadow-text d-flex align-items-center me-auto text-white fs-3"
           >
-            <img
-              src="https://via.placeholder.com/50" // Replace with your logo URL
-              alt="Logo"
-              className="me-2"
-            />
             HANDMADELOVE By Tanya
           </Navbar.Brand>
           {/* Brand */}
@@ -43,10 +40,15 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={Link} to="/cart" className="text-white">
-                <i className="fas fa-shopping-cart me-1"></i> Cart
+                <FaShoppingCart /> Cart
+                {cartItems.length > 0 && (
+                  <Badge pill bg="success" style={{ marginLeft: '5px' }}>
+                    {cartItems.reduce((a, c) => a + c.qty, 0)}
+                  </Badge>
+                )}
               </Nav.Link>
               <Nav.Link as={Link} to="/login" className="text-white">
-                <i className="fas fa-user me-1"></i> Sign in
+                <FaUser /> Sign in
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

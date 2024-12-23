@@ -2,25 +2,24 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
+import { formatPrice } from '../utils/priceUtils';
+import '../assets/index.css';
 const Product = ({ product }) => {
   return (
-    <Card className="shadow-sm mb-4" style={{ width: '18rem' }}>
+    <Card className="product-card shadow-sm m-3">
       {/* Product Image */}
-      <Link to={`/product/${product.productId}`}>
+      <Link to={`/product/${product._id}`}>
         <Card.Img
           variant="top"
           src={product.img}
           alt={product.name}
-          style={{ height: '300px', objectFit: 'cover' }}
+          className="product-card-img"
         />
       </Link>
 
       {/* Card Body */}
       <Card.Body>
-        <Card.Title
-          className="text-uppercase fw-bold"
-          style={{ fontSize: '16px' }}
-        >
+        <Card.Title className="text-uppercase fw-bold product-card-title">
           <Link
             to={`/product/${product._id}`}
             className="text-decoration-none text-dark"
@@ -28,7 +27,9 @@ const Product = ({ product }) => {
             {product.name}
           </Link>
         </Card.Title>
-        <Card.Text className="text-muted">₹ {product.price}</Card.Text>
+        <Card.Text className="text-muted">
+          {formatPrice(product.price)}
+        </Card.Text>
         <Card.Text>
           <Rating value={product.rating} color={'#ffae2d'} />
         </Card.Text>

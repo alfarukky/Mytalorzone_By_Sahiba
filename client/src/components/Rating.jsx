@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Rating = ({ value, color }) => {
   return (
     <div className="rating">
